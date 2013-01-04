@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Pomodoro</title>
+
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.timers.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<a href="https://github.com/horsley/pomodoro">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+</a>
+<div class="container">
+    <div>
+        <div id="reminderContainer" class="well hide">提示信息</div>
+    </div>
+    <div>
+        <div id="mainTimeCounter">25:00</div>
+    </div>
+    <div>
+        <div class="progress progress-striped">
+            <div class="bar" id="mainTimeProgress" style="width: 100%;"></div>
+        </div>
+    </div>
+
+    <div style="margin-top: 2em" class="clearfix well">
+
+        <button class="btn btn-large btn-primary" id="startBtn">Start Pomodoro</button>
+        <button class="btn btn-large disabled" id="stopBtn">Stop</button>
+
+        <span class="pull-right">
+            <button class="btn btn-large" id="reminderBtn" data-toggle="modal" data-target="#txtModal">Set reminder</button>
+        </span>
+
+    </div>
+
+    <div style="text-align: center">
+        Pomodoro v1.0 | Powered by Horsley
+    </div>
+</div>
+<div id="txtModal" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Set task reminder text</h3>
+    </div>
+    <div class="modal-body">
+        <input type="text" name="reminderText" style="width: 95%" placeholder="Remind yourself what you should do during the pomodoro...">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" id="setReminderBtn">Save</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    </div>
+</div>
+</body>
+</html>

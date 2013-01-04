@@ -1,0 +1,14 @@
+#mainTimeCounter {
+    font: bold 320px/1.0 arial,sans-serif;
+    text-shadow: 0px 0px 20px #001;
+    filter: dropshadow(color=#001, offx=0, offy=0);
+    text-align: center;
+}
+
+#reminderContainer {
+    font-size: 72px;
+    line-height: 1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
