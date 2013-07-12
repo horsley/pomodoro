@@ -18,7 +18,7 @@
 </a>
 <div class="container">
     <div>
-        <div id="reminderContainer" class="well hide">鎻愮ず淇℃伅</div>
+        <div id="reminderContainer" class="well hide">提示信息</div>
     </div>
     <div>
         <div id="mainTimeCounter">25:00</div>
@@ -35,18 +35,19 @@
         <button class="btn btn-large disabled" id="stopBtn">Stop</button>
 
         <span class="pull-right">
-            <button class="btn btn-large" id="reminderBtn" data-toggle="modal" data-target="#txtModal">Set reminder</button>
+            <button class="btn btn-large" id="reminderBtn" data-toggle="modal" data-target="#txtModal">Set Reminder</button>
+            <button class="btn btn-large" id="timerBtn" data-toggle="modal" data-target="#txtModal2">Set Timer</button>
         </span>
 
     </div>
 
     <div style="text-align: center">
-        Pomodoro v1.0 | Powered by Horsley
+        Pomodoro v1.1 | Powered by Horsley
     </div>
 </div>
 <div id="txtModal" class="modal hide fade">
     <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">脳</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">Set task reminder text</h3>
     </div>
     <div class="modal-body">
@@ -54,6 +55,29 @@
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" id="setReminderBtn">Save</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    </div>
+</div>
+<div id="txtModal2" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Set timer interval</h3>
+    </div>
+    <div class="modal-body">
+        <div class="progress">
+            <div class="bar bar-success" id="pomodoroDuration" style="width: 35%;"></div>
+            <div class="bar bar-warning" id="restDuration" style="width: 20%;"></div>
+        </div>
+        <form class="form-inline">
+            <input type="number" name="pomodoroDuration" placeholder="The working time duration...">
+            <span>min</span>
+
+            <input type="number" name="restDuration" placeholder="The rest time duration...">
+            <span>min</span>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" id="setTimerBtn">Save</button>
         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
     </div>
 </div>
