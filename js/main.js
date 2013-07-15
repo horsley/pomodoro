@@ -2,7 +2,7 @@
  * Created with JetBrains PhpStorm.
  * User: horsley
  * Date: 12-12-31
- * Time: ÏÂÎç8:01
+ * Time: ï¿½ï¿½ï¿½ï¿½8:01
  * To change this template use File | Settings | File Templates.
  */
 var pomodoro = 25 * 60;
@@ -36,10 +36,10 @@ $(function(){
             });
         } else if (pomodoroStatus == 2 || pomodoroStatus == 3 ) { // start having a rest
             mainCounter = pomodoroRest;
+            pomodoroStatus = 2;
+            toggleProgress();
             btn_start.everyTime('1s', function(){
                 mainCounter--;
-                pomodoroStatus = 2;
-                toggleProgress();
                 $('#mainTimeCounter').html(s2Str(mainCounter));
                 bar_progress.width(mainCounter / pomodoroRest * 100 + '%');
 
